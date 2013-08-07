@@ -5,11 +5,7 @@ url = Addressable::URI.new(
   scheme: 'http',
   host: 'localhost',
   port: 3000,
-  path: '/contacts'
+  path: '/users/1/favorites'
 ).to_s
 
-puts RestClient.post(url, {:contact => {:address => "The lightside of the moon",
-                         :email => "you@dowanna.know",
-                         :phone_number => "666-666-6665",
-                         :name => "OTTOnto",
-                         :user_id => 1}})
+puts RestClient.post(url, { :favorite => {:favorited_id => 1} } )

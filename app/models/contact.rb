@@ -7,4 +7,7 @@ class Contact < ActiveRecord::Base
   :foreign_key => :user_id,
   :primary_key => :id
 
+  def belongs_to_user?(user_id)
+    user.id == user_id.to_i
+  end
 end

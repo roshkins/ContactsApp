@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  class UsersController < ApplicationController
     def index
       render :json => User.all
       #render :text => "Whatever"
@@ -14,7 +13,4 @@ class UsersController < ApplicationController
         render :json => user.errors, status: :unprocessable_entity
       end
     end
-
-  end
-
 end

@@ -14,4 +14,6 @@ class Favorite < ActiveRecord::Base
   :class_name => "Contact",
   :foreign_key => :favorited_id,
   :primary_key => :id
+
+
 end
