@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
-  attr_accessible :username
+  attr_accessible :email, :name
+
+  validates :email, :presence => true
+
 
   has_many :contacts,
   :class_name  => "Contact",
