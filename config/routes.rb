@@ -1,8 +1,9 @@
 ContactsApp::Application.routes.draw do
    resources :users do
-     resources :contacts, :only => [:index]
+     resources :contacts
+     resources :favorites
    end
 
-   resources :contacts, :except => [:index]
+
 
 end
